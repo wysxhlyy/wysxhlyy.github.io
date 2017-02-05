@@ -85,24 +85,24 @@
 
 
 <meta name="description" content="JavaScript 作用域详解到现在已经学了将近一个月的JS了，对一个不折不扣的新手来说，感觉弄清楚作用域对于学习JS极其重要，所以我的第一篇blog主题就是JS作用域详解。如果文中有错误的地方，欢迎指正！
-作用域链与执行环境首先介绍两个知识点：
+作用域链与执行环境什么是执行环境：
 执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个函数都有自己的执行环境。
-作用域链的用途是保证对执行环境有权访问的所有变量和函数">
+什么是作用域链：作用域链的用途是保证对执行环境有权访问的所">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 作用域详解">
 <meta property="og:url" content="http://yoursite.com/2017/02/05/Blog1/index.html">
 <meta property="og:site_name" content="Mario's Blog">
 <meta property="og:description" content="JavaScript 作用域详解到现在已经学了将近一个月的JS了，对一个不折不扣的新手来说，感觉弄清楚作用域对于学习JS极其重要，所以我的第一篇blog主题就是JS作用域详解。如果文中有错误的地方，欢迎指正！
-作用域链与执行环境首先介绍两个知识点：
+作用域链与执行环境什么是执行环境：
 执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个函数都有自己的执行环境。
-作用域链的用途是保证对执行环境有权访问的所有变量和函数">
-<meta property="og:updated_time" content="2017-02-05T17:40:30.000Z">
+什么是作用域链：作用域链的用途是保证对执行环境有权访问的所">
+<meta property="og:updated_time" content="2017-02-05T17:47:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 作用域详解">
 <meta name="twitter:description" content="JavaScript 作用域详解到现在已经学了将近一个月的JS了，对一个不折不扣的新手来说，感觉弄清楚作用域对于学习JS极其重要，所以我的第一篇blog主题就是JS作用域详解。如果文中有错误的地方，欢迎指正！
-作用域链与执行环境首先介绍两个知识点：
+作用域链与执行环境什么是执行环境：
 执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个函数都有自己的执行环境。
-作用域链的用途是保证对执行环境有权访问的所有变量和函数">
+什么是作用域链：作用域链的用途是保证对执行环境有权访问的所">
 
 
 
@@ -378,10 +378,11 @@
 
       
         <h1 id="JavaScript-作用域详解"><a href="#JavaScript-作用域详解" class="headerlink" title="JavaScript 作用域详解"></a>JavaScript 作用域详解</h1><p>到现在已经学了将近一个月的JS了，对一个不折不扣的新手来说，感觉弄清楚作用域对于学习JS极其重要，所以我的第一篇blog主题就是JS作用域详解。如果文中有错误的地方，欢迎指正！</p>
-<h2 id="作用域链与执行环境"><a href="#作用域链与执行环境" class="headerlink" title="作用域链与执行环境"></a>作用域链与执行环境</h2><h5 id="首先介绍两个知识点："><a href="#首先介绍两个知识点：" class="headerlink" title="首先介绍两个知识点："></a>首先介绍两个知识点：</h5><ul>
-<li>执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个函数都有自己的执行环境。</li>
-<li>作用域链的用途是保证对<strong>执行环境有权访问</strong>的所有变量和函数的<strong>有序访问</strong>。</li>
-</ul>
+<h2 id="作用域链与执行环境"><a href="#作用域链与执行环境" class="headerlink" title="作用域链与执行环境"></a>作用域链与执行环境</h2><h5 id="什么是执行环境："><a href="#什么是执行环境：" class="headerlink" title="什么是执行环境："></a>什么是执行环境：</h5><blockquote>
+<p>执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个函数都有自己的执行环境。</p>
+<h5 id="什么是作用域链："><a href="#什么是作用域链：" class="headerlink" title="什么是作用域链："></a>什么是作用域链：</h5><p>作用域链的用途是保证对<strong>执行环境有权访问</strong>的所有变量和函数的<strong>有序访问</strong>。</p>
+</blockquote>
+<a id="more"></a> 
 <p>先来看一个简单例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name=<span class="string">"lucy"</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changePerson</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> gender=<span class="literal">null</span>;</div><div class="line">    <span class="keyword">if</span>(name===<span class="string">"lucy"</span>)&#123;</div><div class="line">        name=<span class="string">"david"</span>;</div><div class="line">        gender=<span class="string">"male"</span>;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        name=<span class="string">"lucy"</span>;</div><div class="line">        gender=<span class="string">"lady"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">changePerson();</div><div class="line"></div><div class="line">alert(<span class="string">"name is "</span>+name); <span class="comment">//name is david</span></div><div class="line">alert(<span class="string">"gender is "</span>+ gender); <span class="comment">//Uncaught ReferenceError: gender is not defined</span></div></pre></td></tr></table></figure></p>
 <ol>
 <li>这里changeName()的作用域包含两个对象：arguments对象和全局环境对象。changeName()之所以可以在函数内部访问变量color和gender，是因为可以在这个作用域链中找到它。</li>
@@ -594,7 +595,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-作用域详解"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 作用域详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域链与执行环境"><span class="nav-number">1.1.</span> <span class="nav-text">作用域链与执行环境</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#首先介绍两个知识点："><span class="nav-number">1.1.0.0.1.</span> <span class="nav-text">首先介绍两个知识点：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript的块级作用域"><span class="nav-number">1.2.</span> <span class="nav-text">JavaScript的块级作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是块级作用域"><span class="nav-number">1.2.1.</span> <span class="nav-text">什么是块级作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript中没有块级作用域"><span class="nav-number">1.2.2.</span> <span class="nav-text">JavaScript中没有块级作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#块级作用域的作用"><span class="nav-number">1.2.3.</span> <span class="nav-text">块级作用域的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-作用域详解"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 作用域详解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域链与执行环境"><span class="nav-number">1.1.</span> <span class="nav-text">作用域链与执行环境</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是执行环境："><span class="nav-number">1.1.0.0.1.</span> <span class="nav-text">什么是执行环境：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是作用域链："><span class="nav-number">1.1.0.0.2.</span> <span class="nav-text">什么是作用域链：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript的块级作用域"><span class="nav-number">1.2.</span> <span class="nav-text">JavaScript的块级作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是块级作用域"><span class="nav-number">1.2.1.</span> <span class="nav-text">什么是块级作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript中没有块级作用域"><span class="nav-number">1.2.2.</span> <span class="nav-text">JavaScript中没有块级作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#块级作用域的作用"><span class="nav-number">1.2.3.</span> <span class="nav-text">块级作用域的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
