@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="test," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,43 @@
 
 
 
-<meta name="description" content="1System.out.println(&quot;Hello World&quot;);">
+<meta name="description" content="###定义：
+
+事件：用户或浏览器自身执行的某种动作。（click,load,mouseover）
+事件流：从页面中接收事件的顺序，也可理解为事件在页面中传播的顺序。
+事件处理程序：响应某个事件的函数。均以on开头。（onclick,onmouseover等）
+
+###1.事件流事件流分成两种：事件冒泡和事件捕获：
+
+IE的事件流叫做事件冒泡，即事件开始时由最具体的元素接受，然后逐级向上传播到较为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My first post">
-<meta property="og:url" content="http://yoursite.com/2017/01/30/My-first-post/index.html">
+<meta property="og:title" content="DOM事件流&&事件处理程序">
+<meta property="og:url" content="http://yoursite.com/2017/02/12/Blog2/index.html">
 <meta property="og:site_name" content="Mario's Blog">
-<meta property="og:description" content="1System.out.println(&quot;Hello World&quot;);">
-<meta property="og:updated_time" content="2017-01-30T21:26:25.000Z">
+<meta property="og:description" content="###定义：
+
+事件：用户或浏览器自身执行的某种动作。（click,load,mouseover）
+事件流：从页面中接收事件的顺序，也可理解为事件在页面中传播的顺序。
+事件处理程序：响应某个事件的函数。均以on开头。（onclick,onmouseover等）
+
+###1.事件流事件流分成两种：事件冒泡和事件捕获：
+
+IE的事件流叫做事件冒泡，即事件开始时由最具体的元素接受，然后逐级向上传播到较为">
+<meta property="og:image" content="http://yoursite.com/2017/02/12/Blog2/event2.png">
+<meta property="og:image" content="http://yoursite.com/2017/02/12/Blog2/event.png">
+<meta property="og:updated_time" content="2017-02-12T16:37:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My first post">
-<meta name="twitter:description" content="1System.out.println(&quot;Hello World&quot;);">
+<meta name="twitter:title" content="DOM事件流&&事件处理程序">
+<meta name="twitter:description" content="###定义：
+
+事件：用户或浏览器自身执行的某种动作。（click,load,mouseover）
+事件流：从页面中接收事件的顺序，也可理解为事件在页面中传播的顺序。
+事件处理程序：响应某个事件的函数。均以on开头。（onclick,onmouseover等）
+
+###1.事件流事件流分成两种：事件冒泡和事件捕获：
+
+IE的事件流叫做事件冒泡，即事件开始时由最具体的元素接受，然后逐级向上传播到较为">
+<meta name="twitter:image" content="http://yoursite.com/2017/02/12/Blog2/event2.png">
 
 
 
@@ -121,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/30/My-first-post/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/12/Blog2/"/>
 
 
 
 
 
-  <title> My first post | Mario's Blog </title>
+  <title> DOM事件流&&事件处理程序 | Mario's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -272,7 +299,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/30/My-first-post/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/12/Blog2/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="邬昱圣">
@@ -296,7 +323,7 @@
             
             
               
-                My first post
+                DOM事件流&&事件处理程序
               
             
           </h1>
@@ -311,8 +338,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-30T21:15:52+00:00">
-                2017-01-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-12T16:29:14+00:00">
+                2017-02-12
               </time>
             
 
@@ -330,8 +357,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/30/My-first-post/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/30/My-first-post/" itemprop="commentCount"></span>
+                <a href="/2017/02/12/Blog2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/02/12/Blog2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -341,7 +368,7 @@
 
           
           
-             <span id="/2017/01/30/My-first-post/" class="leancloud_visitors" data-flag-title="My first post">
+             <span id="/2017/02/12/Blog2/" class="leancloud_visitors" data-flag-title="DOM事件流&&事件处理程序">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -368,7 +395,67 @@
       
 
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">System.out.println(<span class="string">"Hello World"</span>);</div></pre></td></tr></table></figure>
+        <p>###定义：</p>
+<ul>
+<li>事件：用户或浏览器自身执行的某种动作。（click,load,mouseover）</li>
+<li>事件流：从页面中接收事件的顺序，也可理解为事件在页面中传播的顺序。</li>
+<li>事件处理程序：响应某个事件的函数。均以on开头。（onclick,onmouseover等）</li>
+</ul>
+<p>###1.事件流<br>事件流分成两种：事件冒泡和事件捕获：</p>
+<ul>
+<li>IE的事件流叫做事件冒泡，即事件开始时由最具体的元素接受，然后逐级向上传播到较为不具体的节点。</li>
+<li>事件捕获的思想恰恰相反：不太具体的节点应该更早接收到事件，而最具体的节点应该最后接收到事件。(在事件达到预定目标之前捕获它)</li>
+</ul>
+<p>####DOM事件流<br>“DOM2级事件”规定的事件流包括三个阶段：事件捕获阶段，处于目标阶段和事件冒泡阶段。首先发生的是事件捕获阶段，为截获事件提供了机会。然后是实际的目标接收事件。最后一个阶段是冒泡阶段，可以在这个阶段对事件作出相应。</p>
+<img src="/2017/02/12/Blog2/event2.png" alt="This is an example image" title="This is an example image">
+<p>以上图为例，单击div会按照图上显示的顺序触发事件。</p>
+<p>####浏览器支持</p>
+<ul>
+<li>IE9，safari，chrome等目前均支持事件捕获的事件流类型，这些浏览器都是从windows对象开始捕获事件的。</li>
+<li>大多数情况下，都是将事件处理程序添加到事件流的冒泡阶段，这样可以最大限度地兼容浏览器。（IE8及更早版本不支持时间捕获）如果不是特别需要，不建议在事件捕获阶段注册事件处理程序。</li>
+<li>IE9，Opera,Firefox,Chrome 和 Safari都支持DOM事件流，IE8及更早版本不支持DOM事件流。</li>
+</ul>
+<p>####例子</p>
+<p>#####addEventListener<br>在写例子之前，先简单介绍一个方法：addEventListener</p>
+<ul>
+<li>该方法是‘DOM2级事件处理程序’的方法，它接受三个参数：要处理的事件名，作为事件处理程序的函数和一个布尔值<ul>
+<li>布尔值为false代表在冒泡阶段调用事件处理程序，true代表在捕获阶段调用事件处理程序</li>
+</ul>
+</li>
+<li>比如：btn.addEventListener(“click”,function(){alert(“Hello world”)},false) 就代表给按钮btn注册一个事件，当被点击时浏览器会弹出消息“Hello World”，并且在冒泡阶段调用click。</li>
+</ul>
+<p>#####比较事件冒泡和事件捕获<br>接下来就用addEventListener来展示事件冒泡和事件捕获的区别：<br>先放上html 和 css 代码：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"level1"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"level2"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"level3"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#level1</span>&#123;</div><div class="line">	<span class="attribute">background</span>:red;</div><div class="line">	<span class="attribute">height</span>:<span class="number">200px</span>;</div><div class="line">	<span class="attribute">width</span>:<span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="selector-id">#level2</span>&#123;</div><div class="line">	<span class="attribute">background</span>:orange;</div><div class="line">	<span class="attribute">height</span>:<span class="number">100px</span>;</div><div class="line">	<span class="attribute">width</span>:<span class="number">100px</span>;</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="selector-id">#level3</span>&#123;</div><div class="line">	<span class="attribute">background</span>:yellow;</div><div class="line">	<span class="attribute">height</span>:<span class="number">50px</span>;</div><div class="line">	<span class="attribute">width</span>:<span class="number">50px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>呈现的效果很简单，就是三个不同颜色的div块：<br><img src="/2017/02/12/Blog2/event.png" alt="This is an example image" title="This is an example image"></p>
+<p>然后用JS给每一个div注册一个点击事件，为了更加直观，当每一个div的点击事件被触发时，会显示一条该div块背景颜色的消息，这样我们就能清楚地看到各个div的click事件被触发的先后顺序<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> level1=<span class="built_in">document</span>.getElementById(<span class="string">'level1'</span>);</div><div class="line"><span class="keyword">var</span> level2=<span class="built_in">document</span>.getElementById(<span class="string">'level2'</span>);</div><div class="line"><span class="keyword">var</span> level3=<span class="built_in">document</span>.getElementById(<span class="string">'level3'</span>);</div><div class="line"></div><div class="line">level.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="string">'yellow'</span>);</div><div class="line">&#125;,<span class="literal">false</span>);</div><div class="line"></div><div class="line">leve2.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="string">'orange'</span>);</div><div class="line">&#125;,<span class="literal">false</span>);</div><div class="line"></div><div class="line">leve3.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="string">'red'</span>);</div><div class="line">&#125;,<span class="literal">false</span>);</div></pre></td></tr></table></figure></p>
+<p>根据上面的例子，addEventListener的布尔值参数被设置为false，所以会在冒泡阶段调用事件处理程序。当点击黄色方块后，会先后弹出消息”yellow”,”orange”,”red”；点击橙色方块后，会弹出消息”orange”,”red”；点击红色方块后，会弹出”red”.这个结果也印证了我们之前所说的事件冒泡会使事件开始时由最具体的元素接受，然后逐级向上传播到较为不具体的节点。这里的黄色方块是嵌套在最里面的div块，所以是该例子中最具体的节点，红色块是最外层的div快，在该例中是最不具体的节点。</p>
+<p>接着我们再测试一下用事件捕获的思想会获得什么结果：<br>html和css代码都不需要变动，只需要对JS代码稍作修改:把布尔值从false改成true.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> level1=<span class="built_in">document</span>.getElementById(<span class="string">'level1'</span>);</div><div class="line"><span class="keyword">var</span> level2=<span class="built_in">document</span>.getElementById(<span class="string">'level2'</span>);</div><div class="line"><span class="keyword">var</span> level3=<span class="built_in">document</span>.getElementById(<span class="string">'level3'</span>);</div><div class="line"></div><div class="line">level.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="string">'yellow'</span>);</div><div class="line">&#125;,<span class="literal">true</span>);</div><div class="line"></div><div class="line">leve2.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="string">'orange'</span>);</div><div class="line">&#125;,<span class="literal">true</span>);</div><div class="line"></div><div class="line">leve3.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="string">'red'</span>);</div><div class="line">&#125;,<span class="literal">true</span>);</div></pre></td></tr></table></figure></p>
+<p>结果还是和我们预想的一样，当点击黄色方块后，会先后弹出消息”red”,”orange”,”yellow”;当点击橙色方块后，会先后弹出消息”red”,”orange”；点击红色方块时仍然只有”red”.结果和上例恰好相反。</p>
+<p>从上述两个例子，我们可以清晰地看出事件冒泡和事件捕获两种事件流的区别。</p>
+<p>###事件处理程序</p>
+<p>#####4种为事件指定处理程序的方式：</p>
+<ul>
+<li>HTML 事件处理程序：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"click"</span> <span class="attr">onclick</span>=<span class="string">"showMsg()"</span>/&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">showMsg</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		alert(<span class="string">"hello world"</span>);</div><div class="line">	&#125;</div><div class="line"><span class="string">``</span><span class="string">` </span></div><div class="line"></div><div class="line">* DOM0级事件处理程序：</div><div class="line"></div><div class="line">`<span class="string">``</span> Javascript</div><div class="line">	btn.onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		alert(<span class="string">"hello world"</span>);</div><div class="line">	&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>DOM2级事件处理程序：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">btn.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,<span class="literal">false</span>); <span class="comment">//事件冒泡</span></div><div class="line">btn.addEventListener(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,<span class="literal">true</span>); <span class="comment">//事件捕获</span></div></pre></td></tr></table></figure>
+<ul>
+<li>IE事件处理程序<ul>
+<li>通过attachEvent（）添加的事件处理程序会被添加到冒泡阶段。</li>
+<li>使用attachEvent（）方法的情况下，事件处理程序会在全局作用域中运行，因此this等于window。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">btn.attachEvent(<span class="string">"onclick"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="string">"hello world"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>参考</p>
+<ul>
+<li>Javascript高级程序设计</li>
+</ul>
+
       
     </div>
 
@@ -405,26 +492,20 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/test/" rel="tag"># test</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/05/Blog1/" rel="next" title="JavaScript学习笔记(1) 作用域详解">
+                <i class="fa fa-chevron-left"></i> JavaScript学习笔记(1) 作用域详解
+              </a>
             
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/05/Blog1/" rel="prev" title="JavaScript学习笔记(1) 作用域详解">
-                JavaScript学习笔记(1) 作用域详解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -688,9 +769,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'mariowu';
-      var disqus_identifier = '2017/01/30/My-first-post/';
+      var disqus_identifier = '2017/02/12/Blog2/';
 
-      var disqus_title = "My first post";
+      var disqus_title = "DOM事件流&&事件处理程序";
 
 
       function run_disqus_script(disqus_script) {
